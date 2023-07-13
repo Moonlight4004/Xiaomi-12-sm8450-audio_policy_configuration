@@ -77,7 +77,9 @@
                 </mixPort>
                 <mixPort name="hifi_playback" role="source" />
                 <mixPort name="compress_passthrough" role="source"
-                        flags="AUDIO_OUTPUT_FLAG_DIRECT AUDIO_OUTPUT_FLAG_COMPRESS_OFFLOAD AUDIO_OUTPUT_FLAG_NON_BLOCKING">
+                        flags="AUDIO_OUTPUT_FLAG_DIRECT|AUDIO_OUTPUT_FLAG_COMPRESS_OFFLOAD|AUDIO_OUTPUT_FLAG_NON_BLOCKING">
+                    <profile name="" format="dynamic"
+                             samplingRates="dynamic" channelMasks="dynamic"/>
                 </mixPort>
                 <mixPort name="direct_pcm" role="source"
                         flags="AUDIO_OUTPUT_FLAG_DIRECT">
